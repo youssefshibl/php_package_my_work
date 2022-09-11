@@ -1,0 +1,19 @@
+{
+  "name": "st/test_package",
+  "description": "test",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Test\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "youssefshibl",
+      "email": "youssefshibl000@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
