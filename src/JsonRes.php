@@ -11,8 +11,6 @@ class JsonRes
     static function ToJson($array)
     {
         try {
-
-
             return JsonHelper::convert_to_json($array);
         } catch (Exception $ex) {
             $code = $ex->getCode();
@@ -70,6 +68,21 @@ class JsonRes
         $data = [
             'status' => true,
             $key => $data
+        ];
+        try {
+            return JsonHelper::convert_to_json($data);
+        } catch (Exception $ex) {
+            $code = $ex->getCode();
+            $message = $ex->getMessage();
+            $file = $ex->getFile();
+            $line = $ex->getLine();
+            echo "Exception thrown in $file on line $line: [Code $code] $message";
+        }
+    }
+    public function SendSuccess()
+    {
+        $data = [
+            'status' => true
         ];
         try {
             return JsonHelper::convert_to_json($data);
