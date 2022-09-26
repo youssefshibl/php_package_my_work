@@ -1,6 +1,6 @@
 <?php
 
-namespace Shebl;
+namespace Shebl\Functions;
 
 class Random
 {

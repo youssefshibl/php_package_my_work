@@ -1,6 +1,6 @@
 <?php
 
-namespace Shebl;
+namespace Shebl\Functions;
 
 use Exception;
 use Shebl\Helper\JsonHelper;
