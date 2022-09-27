@@ -2,7 +2,7 @@
 
 namespace BaklySystems\PayMob;
 
-
+use Shebl\Nexmo\Nexmo;
 
 class PayMobServiceProvider
 {
@@ -22,9 +22,9 @@ class PayMobServiceProvider
      */
     public function register()
     {
-        // PayMob Facede.
-        // $this->app->singleton('paymob', function () {
-        //     return new ;
-        // });
+        $this->app->singleton('nexmo', function () {
+            return new Nexmo;
+            
+        });
     }
 }
