@@ -2,9 +2,10 @@
 
 namespace Shebl;
 
+use Illuminate\Support\ServiceProvider;
 use Shebl\Nexmo\Nexmo;
 
-class SheblServiceProvider
+class SheblServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
