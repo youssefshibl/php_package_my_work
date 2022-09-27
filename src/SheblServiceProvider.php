@@ -1,10 +1,10 @@
 <?php
 
-namespace BaklySystems\PayMob;
+namespace Shebl;
 
 use Shebl\Nexmo\Nexmo;
 
-class PayMobServiceProvider
+class SheblServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -24,7 +24,6 @@ class PayMobServiceProvider
     {
         $this->app->singleton('nexmo', function () {
             return new Nexmo;
-            
         });
     }
 }
