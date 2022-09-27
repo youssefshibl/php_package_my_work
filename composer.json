@@ -16,6 +16,6 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "illuminate/support": "8.x-dev"
+    "guzzlehttp/guzzle": "7.5.x-dev"
   }
 }
