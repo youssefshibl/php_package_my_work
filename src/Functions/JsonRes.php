@@ -7,6 +7,7 @@ use Shebl\Helper\JsonHelper;
 
 class JsonRes
 {
+
     // convert array to josn
     static function ToJson($array)
     {
@@ -96,5 +97,9 @@ class JsonRes
             $line = $ex->getLine();
             echo "Exception thrown in $file on line $line: [Code $code] $message";
         }
+    }
+    static function instance()
+    {
+        return new JsonRes();
     }
 }

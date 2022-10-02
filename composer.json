@@ -26,6 +26,14 @@
         "Nexmo": "Shebl\\Facades\\Nexmo"
       }
     }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.25"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php ./vendor/bin/testbench package:discover --ansi"
+    ]
   }
 }
 

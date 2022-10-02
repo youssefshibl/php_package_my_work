@@ -32,3 +32,9 @@ class SheblServiceProvider extends ServiceProvider
 }
 
 // "shebl/handlemywork": "dev-main"
+// "repositories": [
+    //     {
+    //         "type": "path",
+    //         "url": "../test_package"
+    //     }
+    // ],
