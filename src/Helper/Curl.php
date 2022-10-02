@@ -2,7 +2,7 @@
 
 namespace Shebl\Helper;
 
-
+use Illuminate\Support\Facades\Http;
 
 trait Curl
 {

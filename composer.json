@@ -16,5 +16,16 @@
   ],
   "require": {
     "illuminate/support": "^8.83"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Shebl\\SheblServiceProvider"
+      ],
+      "aliases": {
+        "Nexmo": "Shebl\\Facades\\Nexmo"
+      }
+    }
   }
 }
+

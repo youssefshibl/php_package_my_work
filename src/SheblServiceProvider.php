@@ -23,8 +23,12 @@ class SheblServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
         $this->app->singleton('nexmo', function () {
             return new Nexmo;
         });
+        //test
     }
 }
+
+// "shebl/handlemywork": "dev-main"

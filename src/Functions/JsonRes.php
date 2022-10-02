@@ -20,7 +20,7 @@ class JsonRes
             echo "Exception thrown in $file on line $line: [Code $code] $message";
         }
     }
-    /* 
+    /*
     convet json to array or boject
     @json -> json string
     @associative if you want output associative array
@@ -37,7 +37,7 @@ class JsonRes
             echo "Exception thrown in $file on line $line: [Code $code] $message";
         }
     }
-    /*  send error to user 
+    /*  send error to user
     @number -> number of error
     @message -> message of this error
     */
@@ -49,7 +49,8 @@ class JsonRes
             'message' => $message
         ];
         try {
-            return JsonHelper::convert_to_json($data);
+            //return JsonHelper::convert_to_json($data);
+            return response()->json($data);
         } catch (Exception $ex) {
             $code = $ex->getCode();
             $message = $ex->getMessage();
@@ -59,7 +60,7 @@ class JsonRes
         }
     }
     /*
-    send data to user 
+    send data to user
 
     */
     static function SendData($key, $data)
@@ -70,7 +71,8 @@ class JsonRes
             $key => $data
         ];
         try {
-            return JsonHelper::convert_to_json($data);
+            //return JsonHelper::convert_to_json($data);
+            return response()->json($data);
         } catch (Exception $ex) {
             $code = $ex->getCode();
             $message = $ex->getMessage();
@@ -79,13 +81,14 @@ class JsonRes
             echo "Exception thrown in $file on line $line: [Code $code] $message";
         }
     }
-    public function SendSuccess()
+    static function SendSuccess()
     {
         $data = [
             'status' => true
         ];
         try {
-            return JsonHelper::convert_to_json($data);
+            //return JsonHelper::convert_to_json($data);
+            return response()->json($data);
         } catch (Exception $ex) {
             $code = $ex->getCode();
             $message = $ex->getMessage();
